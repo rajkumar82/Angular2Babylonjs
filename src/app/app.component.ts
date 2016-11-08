@@ -12,19 +12,19 @@ export class AppComponent {
 
   onViewerInitialized(viewer: ViewerComponent) {
 
-      
+
       let scene = viewer.scene;
 
-      let light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
+      let light = new BABYLON.HemisphericLight('hemi', new BABYLON.Vector3(0, 1, 0), scene);
 
-      let light1 = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, -1, 0), scene);
+      let light1 = new BABYLON.HemisphericLight('hemi', new BABYLON.Vector3(0, -1, 0), scene);
 
-      let box = BABYLON.Mesh.CreateBox('box', 100.0, scene,false, BABYLON.Mesh.DOUBLESIDE);
+      let box = BABYLON.Mesh.CreateBox('box', 30.0, scene,false, BABYLON.Mesh.DOUBLESIDE);
       box.position = new BABYLON.Vector3(-10, 0, 0);   // Using a vector
 
-      let material = new BABYLON.StandardMaterial("material", scene);
-      material.diffuseColor = BABYLON.Color3.Blue();
-      
+      let material = new BABYLON.StandardMaterial('material', scene);
+      material.diffuseColor = BABYLON.Color3.Purple();
+
       box.material = material;
       box.enableEdgesRendering(0.01);
 
